@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout 
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:background="@drawable/bg_card2" >
+
+    <TextView
+        android:id="@+id/id_cd_card_static"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="光强"
+        android:textColor="#ffffff"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/id_card_cd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/id_cd_card_static"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:text="--lx"
+        android:textColor="#ffffff"
+        android:textSize="70sp" />
+
+    <TextView
+        android:id="@+id/id_card_time_cd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/id_card_cd"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/id_card_cd"
+        android:text="12:00"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+</RelativeLayout>
+</LinearLayout>
