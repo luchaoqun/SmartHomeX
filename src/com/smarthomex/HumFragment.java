@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class HumFragment extends Fragment implements NetWorkInterface{
 	public TextView textHum;
+	public TextView timeHum;
 	View view;
 
 	@Override
@@ -19,20 +20,24 @@ public class HumFragment extends Fragment implements NetWorkInterface{
 			Bundle savedInstanceState) {
 		view = inflater.inflate(R.layout.hum, container, false);
 		textHum = (TextView) view.findViewById(R.id.id_card_hum);
-		Log.e("", "成功获取控件");
+		timeHum = (TextView) view.findViewById(R.id.id_card_time_hum);
+		Log.e("", "成功获取Hum控件");
 		return view;
 	}
 
 	@Override
 	public void onResume() {
 		super.onResume();
-		WebTask webTask = new WebTask(this);
-		webTask.execute("3");
+		WebTask webTask = new WebTask(this,view);
+		webTask.execute("humidity");
 	}
 
 	@Override
 	public void updateUI(String result) {
 		textHum.setText(result+"  ");
+		GetTime getTime = new GetTime();
+		String tString = getTime.GetNowTime();
+		timeHum.setText(tString);
 		Log.e("", "成功更新数据");
 		
 	}

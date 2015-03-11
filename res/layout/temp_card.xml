@@ -8,7 +8,7 @@
     android:background="@drawable/bg_card" >
 
     <TextView
-        android:id="@+id/id_card_static"
+        android:id="@+id/id_card_static_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -23,7 +23,7 @@
         android:id="@+id/id_card_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/id_card_static"
+        android:layout_alignLeft="@+id/id_card_static_temp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:text="--℃"
@@ -34,11 +34,10 @@
         android:id="@+id/id_card_time_temp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/id_card_temp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/id_card_temp"
-        android:text="12:00"
+        android:layout_alignBottom="@+id/id_card_static_temp"
+        android:layout_marginLeft="100dp"
+        android:layout_toRightOf="@+id/id_card_static_temp"
+        android:text="00:00"
         android:textColor="#ffffff"
         android:textSize="20sp" />
 
